@@ -21,7 +21,6 @@
     function parseArray(str) {
       str = str.trim();
       var hints = str.split('\n');
-      hints = hints.filter(function (e) {return e});
       hints.forEach(function (str, i, hints) {
         var t = str.split(',');
         t.forEach(function (hint, i, t) {
@@ -199,14 +198,32 @@ new NonogramEdit(6, 6, 'adv-edit1');</pre>
   <p>This example shows how to solve the nonogram by given hints, separated by newlines and commas.</p>
   <div class="row form-group">
     <div class="col-md-4">
-      <textarea id="txt-row-hints2" class="form-control" rows="10" placeholder="rowHints...">1,1
-1,1</textarea>
+      <textarea id="txt-row-hints2" class="form-control" rows="10" placeholder="rowHints...">4
+8
+10
+2,2,2
+3,2,3
+12
+2,6,2
+2,6,2
+2,4,2
+3,3
+8
+4</textarea>
     </div>
     <div class="col-md-4">
-      <textarea id="txt-col-hints2" class="form-control" rows="10" placeholder="colHints...">2
-0
-2
-0</textarea>
+      <textarea id="txt-col-hints2" class="form-control" rows="10" placeholder="colHints...">4
+8
+5,3
+2,3,2
+3,4,2
+9,2
+9,2
+3,4,2
+2,3,2
+5,3
+8
+4</textarea>
     </div>
     <div class="col-md-4">
       <button id="btn-solve2" class="btn btn-primary btn-block">Solve!</button>
@@ -218,7 +235,12 @@ document.getElementById('btn-solve2').addEventListener('click', function () {
   new NonogramSolve(
     parseArray(document.getElementById('txt-row-hints2').value),
     parseArray(document.getElementById('txt-col-hints2').value),
-    'adv-solve2').solve();
+    'adv-solve2',
+    {
+      filledColor: '#f90',
+      correctColor: '#f90',
+      wrongColor: '#09f',
+    }).solve();
 });</pre>
   <p>...here <code>parseArray</code> is a function converting your input to a two-dimensional array, whose definition can be found in the source code.
 </body>
