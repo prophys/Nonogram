@@ -22,11 +22,9 @@
       str = str.trim();
       var hints = str.split('\n');
       hints.forEach(function (str, i, hints) {
-        var t = str.split(',');
-        t.forEach(function (hint, i, t) {
-          t[i] = parseInt(hint);
-        });
-        hints[i] = t.filter(function (e) {return e});
+        var t = str.match(/\d+/g) || [];
+        t = t.map(parseFloat);
+        hints[i] = t.filter(Math.sign);
       });
       return hints;
     }
