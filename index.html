@@ -194,32 +194,36 @@ new NonogramEdit(6, 6, 'adv-edit1');</pre>
   <hr>
   <h3>Nonogram Solver</h3>
   <p>This example shows how to solve the nonogram by given hints, separated by newlines and commas.</p>
+  <p class="text-primary">Put your <code>rowHints</code> in the textarea on the left, and your <code>rowHints</code> in the textarea on the right.
+  One line a row (or column), numbers separated by any characters.
+  Empty lines represent empty rows (or columns), but you can add the number <code>0</code> as well.
+  However, empty lines in at the ends will be dropped, because they are really unnecessary.</p>
   <div class="row form-group">
     <div class="col-md-4">
       <textarea id="txt-row-hints2" class="form-control" rows="15" placeholder="rowHints...">4
 8
 10
-2,2,2
-3,2,3
+2  2  2
+3  2  3
 12
-2,6,2
-2,6,2
-2,4,2
-3,3
+2  6  2
+2  6  2
+2  4  2
+3  3
 8
 4</textarea>
     </div>
     <div class="col-md-4">
       <textarea id="txt-col-hints2" class="form-control" rows="15" placeholder="colHints...">4
 8
-5,3
-2,3,2
-3,4,2
-9,2
-9,2
-3,4,2
-2,3,2
-5,3
+5  3
+2  3  2
+3  4  2
+9  2
+9  2
+3  4  2
+2  3  2
+5  3
 8
 4</textarea>
     </div>
