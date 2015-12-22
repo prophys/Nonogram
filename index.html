@@ -37,10 +37,10 @@
 </head>
 
 <body class="container">
-  <h1>HandsomeOne's Nonogram Demo</h1>
-  <h2>Basic Examples</h2>
+  <h1 id="handsomeone-s-nonogram-demo">HandsomeOne's Nonogram Demo</h1>
+  <h2 id="basic-examples">Basic Examples</h2>
   <hr>
-  <h3><code>NonogramEdit</code></h3>
+  <h3 id="nonogramedit"><code>NonogramEdit</code></h3>
   <div class="row">
     <div class="col-md-4">
       <canvas id="edit1"></canvas>
@@ -67,7 +67,7 @@ new NonogramEdit(2, 4, 'edit2', {
     </div>
   </div>
   <hr>
-  <h3><code>NonogramPlay</code></h3>
+  <h3 id="nonogramplay"><code>NonogramPlay</code></h3>
   <div class="row">
     <div class="col-md-4">
       <canvas id="play1"></canvas>
@@ -90,7 +90,7 @@ new NonogramPlay([[1,1], [1,1]], [[2], [], [2], []], 'play2');</pre>
     </div>
   </div>
   <hr>
-  <h3><code>NonogramSolve</code></h3>
+  <h3 id="nonogramsolve"><code>NonogramSolve</code></h3>
   <div class="row">
     <div class="col-md-4">
       <canvas id="solve1"></canvas>
@@ -166,9 +166,9 @@ new NonogramSolve(
       <canvas id="solve2"></canvas>
     </div>
   </div>
-  <h2>Advanced Usages</h2>
+  <h2 id="advanced-usages">Advanced Usages</h2>
   <hr>
-  <h3>Nonogram Generator</h3>
+  <h3 id="nonogram-generator">Nonogram Generator</h3>
   <p>
     This is an example showing how to use custom event listener to create <code>NonogramPlay</code> and <code>NonogramSolve</code> instances automatically.
   </p>
@@ -192,7 +192,7 @@ document.getElementById('adv-edit1').addEventListener('hintchange', function () 
 })
 new NonogramEdit(6, 6, 'adv-edit1');</pre>
   <hr>
-  <h3>Nonogram Solver</h3>
+  <h3 id="nonogram-solver">Nonogram Solver</h3>
   <p>This example shows how to solve the nonogram by given hints, separated by newlines and commas.</p>
   <p class="text-primary">Put your <code>rowHints</code> in the textarea on the left, and your <code>rowHints</code> in the textarea on the right.
   One line a row (or column), numbers separated by any characters.
