@@ -27,7 +27,7 @@
 </head>
 
 <body class="container">
-  <h1 id="handsomeone-s-nonogram-demo">HandsomeOne's Nonogram Demo</h1>
+  <h1 id="handsomeone-s-nonogram-demo">HandsomeOne's Nonogram Demo <a href="https://github.com/HandsomeOne/Nonogram">(View on Github)</a></h1>
   <h2 id="basic-examples">Basic Examples</h2>
   <hr>
   <h3 id="nonogramedit"><code>NonogramEdit</code></h3>
@@ -160,7 +160,7 @@ new NonogramSolve(
   <hr>
   <h3 id="nonogram-generator">Create Your Own Nonogram</h3>
   <p>
-    This is an example showing how to use custom event listener to create <code>NonogramPlay</code> and <code>NonogramSolve</code> instances automatically.
+    Here is an example showing how to use custom event to create <code>NonogramPlay</code> and <code>NonogramSolve</code> instances automatically.
   </p>
   <div class="row">
     <div class="col-md-3">
@@ -208,11 +208,11 @@ document.getElementById('threshold').addEventListener('change', newCustomNonogra
 newCustomNonogram();</pre>
   <hr>
   <h3 id="nonogram-solver">Nonogram Solver</h3>
-  <p>This example shows how to solve the nonogram by given hints, separated by newlines and commas.</p>
-  <p class="text-primary">Put your <code>rowHints</code> in the textarea on the left, and your <code>rowHints</code> in the textarea on the right.
-  One line a row (or column), numbers separated by any characters.
-  Empty lines represent empty rows (or columns), but you can add the number <code>0</code> as well.
-  However, empty lines in at the ends will be dropped, because they are really unnecessary.</p>
+  <p>This example shows how to solve the nonogram by given hints, which are separated by newlines and commas.</p>
+  <p class="text-primary">Put your <code>rowHints</code> in the first textarea, <code>rowHints</code> in the second textarea.
+  One row (or column) a line, numbers separated by any non-numerical characters.
+  To represent an empty row (or column), you can use an empty line, or a line including the number <code>0</code> as well.
+  However, empty lines at two ends will be dropped, since they are really unnecessary.</p>
   <div class="row form-group">
     <div class="col-md-4">
       <textarea id="txt-row-hints2" class="form-control" rows="15" placeholder="rowHints...">4
