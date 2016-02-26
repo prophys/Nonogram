@@ -17,7 +17,7 @@
       for (var i in canvases) {
         canvases[i].title = canvases[i].id;
       }
-    }
+    };
   </script>
   <style>
     canvas {
@@ -215,7 +215,7 @@ newCustomNonogram();</pre>
   However, empty lines at two ends will be dropped, since they are really unnecessary.</p>
   <div class="row form-group">
     <div class="col-md-4">
-      <textarea id="txt-row-hints2" class="form-control" rows="15" placeholder="rowHints...">4
+      <textarea id="txt-row-hints2" class="form-control form-group" rows="15" placeholder="rowHints...">4
 8
 10
 2  2  2
@@ -227,9 +227,10 @@ newCustomNonogram();</pre>
 3  3
 8
 4</textarea>
+      <input type="range" id="delay" class="form-control" min="0" max="1000" step="50" title="delay" value="0">
     </div>
     <div class="col-md-4">
-      <textarea id="txt-col-hints2" class="form-control" rows="15" placeholder="colHints...">4
+      <textarea id="txt-col-hints2" class="form-control form-group" rows="15" placeholder="colHints...">4
 8
 5  3
 2  3  2
@@ -241,9 +242,9 @@ newCustomNonogram();</pre>
 5  3
 8
 4</textarea>
+      <button id="btn-solve2" class="btn btn-primary btn-block">Solve!</button>
     </div>
     <div class="col-md-4">
-      <button id="btn-solve2" class="btn btn-primary btn-block">Solve!</button>
       <canvas id="adv-solve2"></canvas>
     </div>
   </div>
@@ -259,14 +260,17 @@ function parseArray(str) {
   return hints;
 }
 document.getElementById('btn-solve2').addEventListener('click', function () {
+  var delay = document.getElementById('delay').value;
   new NonogramSolve(
     parseArray(document.getElementById('txt-row-hints2').value),
     parseArray(document.getElementById('txt-col-hints2').value),
     'adv-solve2',
     {
-      filledColor: '#f90',
-      correctColor: '#f90',
-      wrongColor: '#09f',
+      filledColor: '#696',
+      correctColor: '#696',
+      wrongColor: '#f69',
+      delay: delay,
+      demoMode: Math.sign(delay),
     }).solve();
 });</pre>
 </body>
